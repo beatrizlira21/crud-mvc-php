@@ -24,6 +24,3 @@
       }
     }
   }
-
-  $testConnection = new Connect();
- echo "teste";

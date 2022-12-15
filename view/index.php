@@ -10,23 +10,25 @@
 </head>
 <body>
     <div class="container container-sm m-5">
-      <h1>Usuário</h1>
-    <div class="w-50 p-2">
-      <label class="form-label">Nome</label>  
-      <input type="text" name="nome" class="form-control">  
+      <form name="newUser" method="POST" action="./controller/clientsController">
+        <h1>Usuário</h1>
+        <div class="w-50 p-2">
+          <label class="form-label">Nome</label>  
+          <input type="text" name="nome" class="form-control">  
         </div>
         <div class="w-50 p-2">
-      <label class="form-label">CPF</label>  
-      <input type="text" name="email" class="form-control">  
+          <label class="form-label">CPF</label>  
+          <input type="text" name="email" class="form-control">  
         </div>
         <div class="mb-5 w-50 p-2">
-      <label class="form-label">Endereço</label>  
-      <input type="text" name="fone" class="form-control">  
+          <label class="form-label">Endereço</label>  
+          <input type="text" name="fone" class="form-control">        
         </div>
 
         <div class="mb-5">
           <button type="submit" class="btn btn-primary">Enviar</button>
         </div>
+        </form>
     <h3>Lista de Clientes</h3>
     <div class="content table table-striped">
       <table class="table">
@@ -45,8 +47,8 @@
               <!--a estrutura do php abaixo é uma forma mais enxuta de fazer o <\?php echo''?\>-->
               <td><?= $data['id']?></td>
               <td><?= $data['nome']?></td>
-              <td><?= $data['email']?></td>
-              <td><?= $data['fone']?></td>
+              <td><?= $data['cpf']?></td>
+              <td><?= $data['endereco']?></td>
             </tr>
             <!--abaixo ele fecha o laço de repetição-->
             <?php endforeach;?>

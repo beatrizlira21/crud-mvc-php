@@ -15,4 +15,9 @@
       $resultData = $this->model->getAll();
       require_once('./view/index.php');
     }
+
+    function Cadastro(){
+      $resultInsert = $this->model->newCad();
+      
+    }
   }

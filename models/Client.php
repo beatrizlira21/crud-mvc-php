@@ -19,4 +19,14 @@
       $result = $sqlSelect->fetchAll();
       return $result;
     }
+
+    function newCad(){
+      $sqlInsert = $this->connection->prepare("INSERT INTO $this->table (nome, cpf, endereco) VALUE (:nome, :tel, :endereco");
+
+      $sqlInsert->execute(array(
+        ':nome'=>$_POST['nome'],
+        ':cpf'=>$_POST['cpf'],
+        ':endereco'=>$_POST['endereco']
+      ));
+    }
   }
